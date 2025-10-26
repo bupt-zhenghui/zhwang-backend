@@ -1,0 +1,82 @@
+# yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
+
+site_name: Zhenghui's Doc
+theme:
+  name: material
+  logo: assets/logo.svg
+  favicon: assets/logo.svg
+  font:
+    text: Noto Serif SC
+    code: Roboto Mono
+    size: 12
+  palette:
+    primary: indigo
+
+  features:
+    - content.code.annotate
+    - content.code.copy
+#    - header.autohide
+    - navigation.tabs
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.sections
+    - navigation.tracking
+    - toc.integrate
+    - navigation.top
+    - navigation.footer
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - abbr
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.betterem
+  - admonition
+  - pymdownx.details
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+nav:
+  - Home: http://zhwang.site
+  - About: index.md
+  - Research:
+      - Thesis: thesis.md
+      - Image Harmonization: Image_Harmonization.md
+      - Tips: Tips.md
+  - Monthly:
+      - 2022-10: 2022-10.md
+  - Archive:
+      - 面试准备: interview.md
+      - 开发手册: 开发手册.md
+      - 算法笔记: 算法笔记.md
+      - 2021年度总结: Traveling Light.md
+  - Trip:
+      - blog/index.md
+
+plugins:
+  - blog
+  - rss:
+      match_path: blog/posts/.*
+      date_from_meta:
+        as_creation: date
+      categories:
+        - categories
+        - tags

@@ -1,0 +1,257 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset=utf-8/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DW1FMKJGYB"></script>
+  <script>
+    var httpRequest = new XMLHttpRequest()
+    // httpRequest.open('GET', 'http://123.57.66.63:8888/api/v1/access/insert-data/6', true)
+    // httpRequest.send()
+
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-DW1FMKJGYB');
+    /**
+     * Function that registers a click on an outbound link in Analytics.
+     * This function takes a valid URL string as an argument, and uses that URL string
+     * as the event label. Setting the transport method to 'beacon' lets the hit be sent
+     * using 'navigator.sendBeacon' in browser that support it.
+     */
+    var getOutboundLink = function (label) {
+      gtag('event', 'click', {
+        'event_category': 'outbound',
+        'event_label': label,
+        'transport_type': 'beacon'
+      });
+    }
+  </script>
+
+  <title> Resume | Wang Zheng Hui</title>
+
+<!--  <link href="davewhipp-screen.css" type="text/css" rel="stylesheet" media="screen">-->
+  <link href="./davewhipp-screen.css" type="text/css" rel="stylesheet" media="screen">
+<!--  <link href="davewhipp-print.css" type="text/css" rel="stylesheet" media="print">-->
+  <link href="./davewhipp-print.css" type="text/css" rel="stylesheet" media="print">
+
+  <meta name="thumbnail" content="https://i.imgur.com/lHhRvK6.png"/>
+</head>
+<body>
+<div id="main">
+  <div id="content">
+    <h1 id="tong-hui-kang">Wang Zheng Hui</h1>
+    <p><br/>
+      Third-year Graduate Student <br/>
+      at Beijing University of Posts & Telecommunications <br/>
+    </p>
+    <div id="contacts">
+      <a id="personal-contacts">(+86)18055627612 | wangzhenghui (at) bupt.edu.cn</a>
+    </div>
+    <div id="webaddress">
+      <a href="http://doc.zhwang.site" onclick="getOutboundLink('LinkedIn'); return true;" target="_blank">
+        Doc</a> |
+      <a href="http://zhwang.site:8889/welcome" onclick="getOutboundLink('Resume'); return true;" target="_blank">
+        Info</a> |
+      <a href="http://zhwang.site:8001/resume.pdf" onclick="getOutboundLink('Resume'); return true;" target="_blank">
+        Resume</a> |
+      <a href="https://leetcode.cn/u/ri-yue-tong-hui-t/" onclick="getOutboundLink('Codeforces'); return true;"
+         target="_blank">
+        Leetcode</a> |
+      <a href="https://github.com/bupt-zhenghui" onclick="getOutboundLink('Github'); return true;" target="_blank">
+        Github</a>
+    </div>
+    <h3 id="interested-in">Interested in</h3>
+    <p>Software Development, Deep Learning (Multimodal cognitive computing)</p>
+    <h2 id="education">Education</h2>
+    <p><strong>Beijing University of Posts & Telecommunications</strong>
+      <code class="language-plaintext highlighter-rouge">Sep 2017 - Jun 2021</code></p>
+    <ul>
+      <li>Bachelor of Management with Honours</li>
+      <li>Curriculums: Data Structure, Computer Network, Software Engineering</li>
+      <li>GPA <a id="sutd-gpa">: 3.6/4.0</a></li>
+      <li>Ranking <a id="sutd-gpa">: 17/178</a> (postgraduate recommendation)</li>
+      <li>CET6 > 572pts</li>
+    </ul>
+    <p><strong>Beijing University of Posts & Telecommunications</strong>
+      <code class="language-plaintext highlighter-rouge">Sep 2021 - Jun 2024</code></p>
+    <ul>
+      <li>Master of Engineering</li>
+      <li>Research: Focus on Image Harmonization with multi-modal strategy
+        <a href="http://123.57.66.63:8001/html/Image-Harmonization.html#%E5%9B%BE%E5%83%8F%E5%92%8C%E8%B0%90%E5%8C%96%E4%BB%BB%E5%8A%A1%E6%B1%87%E6%80%BB" style="color: red" target="_blank">click in detail</a>
+      </li>
+    </ul>
+
+    <h2 id="work-experience">Work Experience</h2>
+    <p><strong>ByteDance</strong>
+      <code class="language-plaintext highlighter-rouge">Mar 2021 - Aug 2021</code><br/>
+      Data-DataPlatform<br/>
+      Software Development Intern</p>
+    <ul>
+      <li>
+        Participate in developing data governance portal, which circles suspected abandoned data<br>
+        assets to assist all business lines of the company to reduce storage and computing resources
+      </li>
+      <li>Technical domains: Golang | React | Git | MySQL | Hive</li>
+    </ul>
+
+    <p><strong>Meituan</strong>
+      <code class="language-plaintext highlighter-rouge">May 2023 - Aug 2023</code><br/>
+      Home Business Group<br/>
+      Software Development Intern</p>
+    <ul>
+      <li>
+        Participate in the development of Shangou sales growth marketing projects, and write<br>
+        technical solutions for related business requirements.
+      </li>
+      <li>Technical domains: Java | Git | MySQL | Redis | Mafka | Thrift</li>
+    </ul>
+
+    <p><strong>Honor</strong>
+      <code class="language-plaintext highlighter-rouge">July 2024 --</code><br/>
+      Product Line<br/>
+      General Software Development Engineer</p>
+    <ul>
+      <li>I may join in Honor Research Institute in Nanjing after I graduate from BUPT~</li>
+    </ul>
+
+    <h2 id="research-projects">Projects</h2>
+    <p><strong>ByteDance</strong> ByteCamp 2022 (Third price with ¥5000 bonus)
+      <code class="language-plaintext highlighter-rouge">Jul 2022 - Aug 2022</code></p>
+    <ul>
+      <li>Proposed a concept called "general computing configuration platform"</li>
+      <li>Designed and implemented the platform and applied it in the scene of smart home</li>
+    </ul>
+    <p><strong>Winter Olympics Global Communication Service Platform</strong>
+      <code class="language-plaintext highlighter-rouge">Sep 2021 - Apr 2022</code></p>
+    <ul>
+      <li>National key research and development program</li>
+      <li>Participated in the construction of the Winter Olympics service platform, designed and released<br/>
+        the Winter Olympics medal table and the Winter Olympics sign-in wechat applet</li>
+    </ul>
+<!--    <h2 id="co-curricular-activities">Co-curricular activities</h2>-->
+<!--    <p><strong>SUTD Robotics Club</strong>-->
+<!--      <code class="language-plaintext highlighter-rouge">May 2017 - Mar 2020</code><br/>-->
+<!--      Committee Member, SAUVC participant</p>-->
+<!--    <ul>-->
+<!--      <li>Facilitated Arduino workshops for more than 100 participants</li>-->
+<!--      <li>Engineered hydrophones to locate pingers for SAUVC competition</li>-->
+<!--    </ul>-->
+<!--    <div style="page-break-after: always;"></div>-->
+
+    <h2 id="contests">Contests</h2>
+    <h3 id="algorithms">Algorithms</h3>
+    <p><strong>Leetcode</strong> - rating <a id="rating">2235</a> <strong><a
+      href="https://leetcode.cn/u/ri-yue-tong-hui-t/" id="rank">knight</a></strong>, rank <a id="placing">1278</a>,
+      top 1.28% over 30+ contests
+      <code class="language-plaintext highlighter-rouge">Present</code></p>
+
+    <h2 id="academic-projects">Honors</h2>
+    <p>
+      Third prize in Mathematics Competition of BUPT
+      <code class="language-plaintext highlighter-rouge">Jul 2018</code><br/>
+    </p>
+    <p>
+      Merit Student of BUPT
+      <code class="language-plaintext highlighter-rouge">Sept 2018</code><br/>
+    </p>
+    <p>
+      Third prize of the National Mathematics Competition for College Students
+      <code class="language-plaintext highlighter-rouge">Dec 2018</code><br/>
+    </p>
+    <p>
+      Selected into Ye Peida Experimental Class of BUPT
+      <code class="language-plaintext highlighter-rouge">Apr 2019</code><br/>
+    </p>
+    <p>
+      Outstanding Graduate of BUPT
+      <code class="language-plaintext highlighter-rouge">May 2021</code><br/>
+    </p>
+    <p>
+      First Class Scholarship
+      <code class="language-plaintext highlighter-rouge">Sept 2021</code><br/>
+    </p>
+    <p>
+      First Class Scholarship
+      <code class="language-plaintext highlighter-rouge">Sept 2022</code><br/>
+    </p>
+
+
+  </div>
+</div>
+
+<script>
+  function interpolate(low_x, high_x, low_y, high_y, given_x) {
+    console.log(low_x, high_x, low_y, high_y, given_x)
+    return Math.floor(low_y + (given_x - low_x) / (high_x - low_x) * (high_y - low_y))
+  }
+
+  function rating_to_world_rank_map(rating) {
+    benchmarks = {
+      1400: 24500,
+      1500: 19000,
+      1600: 15000,
+      1700: 10750,
+      1800: 7800,
+      1900: 6000,
+      2000: 4150,
+      2100: 3000,
+      2200: 1600,
+      2300: 900,
+      2400: 600
+    };
+
+    let prev_reference = 100000;
+    let prev_benchmark = 1000;
+    for (let benchmark in benchmarks) {
+      benchmark = parseInt(benchmark)
+      let reference = benchmarks[benchmark];
+      if (rating <= benchmark) {
+        return interpolate(prev_benchmark, benchmark, prev_reference, reference, rating)
+      }
+      prev_reference = reference;
+      prev_benchmark = benchmark;
+    }
+    return "sub-600"
+  }
+
+  function rank_to_color(rank) {
+    if (rank == "expert") {
+      return "blue"
+    }
+    if (rank == "candidate master") {
+      return "purple"
+    }
+    if (rank.includes("grandmaster")) {
+      return "red"
+    }
+    if (rank.includes("master")) {
+      return "orange"
+    }
+    if (rank == "pupil" || rank == "specialist") {
+      return "green"
+    }
+    return "grey"
+  }
+
+  let apiUrl_codeforces = 'https://codeforces.com/api/user.info?handles=huikang';
+  fetch(apiUrl_codeforces).then(response => {
+    return response.json();
+  }).then(data => {
+    console.log("updating Codeforces data")
+    let profile = data["result"][0]
+    // document.getElementById("rating").text = profile["rating"];
+    // document.getElementById("placing").text = rating_to_world_rank_map(profile["rating"]);
+    // document.getElementById("rank").text = profile["rank"];
+    document.getElementById("rank").style.color = rank_to_color(profile["rank"]);
+  }).catch(err => {
+    console.log(err)
+  });
+</script>
+</body>
+</html>
