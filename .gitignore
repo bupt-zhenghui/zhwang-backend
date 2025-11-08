@@ -1,2 +1,4 @@
 .idea
 /mkdocs/.cache/
+
+.DS_Store

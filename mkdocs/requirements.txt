@@ -1,0 +1,5 @@
+mkdocs==1.6.1
+mkdocs-material
+
+# 实用插件（可选，根据需求添加）
+mkdocs-rss-plugin
