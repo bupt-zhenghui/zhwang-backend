@@ -2,7 +2,7 @@
 
 MKDOCS_TAG="v2-x86"
 MKDOCS_PORT="9090"
-DOCKER_PWD = "Wangzhenghui123"
+DOCKER_PWD="Wangzhenghui123"
 
 docker login --username=bupt_wzh --password="${DOCKER_PWD}" crpi-jic5w57mqp9e5onw.cn-hangzhou.personal.cr.aliyuncs.com
 
