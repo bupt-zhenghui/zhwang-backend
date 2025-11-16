@@ -61,13 +61,10 @@ nav:
       - Thesis: thesis.md
       - Image Harmonization: Image_Harmonization.md
       - Tips: Tips.md
-  - Monthly:
-      - 2022-10: 2022-10.md
   - Archive:
       - 面试准备: interview.md
       - 开发手册: 开发手册.md
       - 算法笔记: 算法笔记.md
-      - 2021年度总结: Traveling Light.md
   - Trip:
       - blog/index.md
 
