@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PROJ_NAME = "mainpage"
+PROJ_NAME="mainpage"
 PROJ_TAG="v2-x86"
 PROJ_PORT="7999"
 DOCKER_PWD="Wangzhenghui123"
