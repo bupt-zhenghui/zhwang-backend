@@ -9,7 +9,7 @@ set -e
 # docker push zhwang1999/mkdocs:v2-arm
 
 REPO="zhwang1999/mkdocs"
-TAG="v2-x86"
+TAG="v2.1-x86"
 DOCKER_PWD="Wangzhenghui123"
 
 # 本地构建 x86

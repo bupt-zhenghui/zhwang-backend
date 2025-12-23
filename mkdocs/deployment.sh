@@ -1,7 +1,7 @@
 #!/bin/bash
 
 PROJ_NAME="mkdocs"
-PROJ_TAG="v2-x86"
+PROJ_TAG="v2.1-x86"
 PROJ_PORT="9090"
 DOCKER_PWD="Wangzhenghui123"
 
