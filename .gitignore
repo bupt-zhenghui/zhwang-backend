@@ -1,4 +1,6 @@
 .idea
 /mkdocs/.cache/
+/mkdocs/docs/blog/posts/summary-.*
+/elk/
 
 .DS_Store

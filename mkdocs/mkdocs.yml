@@ -24,6 +24,10 @@ theme:
     - toc.integrate
     - navigation.top
     - navigation.footer
+    - blog  # 基础博客功能（必须）
+    - blog.tags  # 文章内显示标签及筛选
+    - blog.tags.index  # 生成全局标签索引页
+    - navigation.tabs  # 可选：标签页导航（便于访问标签页）
 
 markdown_extensions:
   - attr_list
@@ -59,17 +63,22 @@ nav:
   - About: index.md
   - Research:
       - Thesis: thesis.md
-      - Image Harmonization: Image_Harmonization.md
-      - Tips: Tips.md
   - Archive:
       - 面试准备: interview.md
       - 开发手册: 开发手册.md
       - 算法笔记: 算法笔记.md
-  - Trip:
+  - Technic:
+      - technic/index.md
+  - Blog:
       - blog/index.md
 
 plugins:
-  - blog
+  - blog:
+      blog_dir: blog
+  - blog:
+      blog_dir: technic
+  - tags
+  - search
   - rss:
       match_path: blog/posts/.*
       date_from_meta:
