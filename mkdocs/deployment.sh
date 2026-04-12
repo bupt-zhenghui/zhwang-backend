@@ -12,9 +12,18 @@ fi
 
 PROJ_TAG="$1"
 ALIYUN_REPO="crpi-jic5w57mqp9e5onw.cn-hangzhou.personal.cr.aliyuncs.com/zhwang/${PROJ_NAME}"
-DOCKER_PWD="Wangzhenghui123"
 
-docker login --username=bupt_wzh --password="${DOCKER_PWD}" "${ALIYUN_REPO%/*}"
+# 从 .env 文件加载环境变量
+if [ -f .env ]; then
+  set -a
+  source .env
+  set +a
+else
+  echo ".env 文件不存在，请创建并设置 ALIYUN_PASSWORD"
+  exit 1
+fi
+
+docker login --username="${ALIYUN_USERNAME}" --password="${ALIYUN_PASSWORD}" "${ALIYUN_REPO%/*}"
 
 docker pull "${ALIYUN_REPO}:${PROJ_TAG}"
 

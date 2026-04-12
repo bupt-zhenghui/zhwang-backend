@@ -2,27 +2,34 @@
 
 set -e
 
-# 本地构建 arm
-# docker build . -t zhwang1999/mainpage:v2-arm
+if [ -z "$1" ]; then
+  echo "用法: ./build.sh <tag>"
+  echo "示例: ./build.sh v2026.04.12-x86"
+  exit 1
+fi
 
-# 推送dockerHub远程
-# docker push zhwang1999/mainpage:v2-arm
-
+TAG="$1"
 REPO="zhwang1999/mainpage"
-TAG="v2-x86"
-DOCKER_PWD="Wangzhenghui123"
+ALIYUN_REPO="crpi-jic5w57mqp9e5onw.cn-hangzhou.personal.cr.aliyuncs.com/zhwang/mainpage"
 
-# 本地构建 x86
+if [ -f .env ]; then
+  set -a
+  source .env
+  set +a
+else
+  echo ".env 文件不存在，请创建并设置 ALIYUN_PASSWORD"
+  exit 1
+fi
+
 docker build . --platform linux/amd64 -t "${REPO}:${TAG}"
 
-# 获取镜像对应ImageID
 IMAGE_ID=$(docker images --filter=reference="${REPO}:${TAG}" --format "{{.ID}}")
 
 if [ -n "$IMAGE_ID" ]; then
   echo "镜像ID: $IMAGE_ID"
-  docker login --username=bupt_wzh --password="${DOCKER_PWD}" crpi-jic5w57mqp9e5onw.cn-hangzhou.personal.cr.aliyuncs.com
-  docker tag "${IMAGE_ID}" "crpi-jic5w57mqp9e5onw.cn-hangzhou.personal.cr.aliyuncs.com/zhwang/mainpage:${TAG}"
-  docker push "crpi-jic5w57mqp9e5onw.cn-hangzhou.personal.cr.aliyuncs.com/zhwang/mainpage:${TAG}"
+  docker login --username="${ALIYUN_USERNAME}" --password="${ALIYUN_PASSWORD}" "${ALIYUN_REPO%/*}"
+  docker tag "${IMAGE_ID}" "${ALIYUN_REPO}:${TAG}"
+  docker push "${ALIYUN_REPO}:${TAG}"
   echo "镜像推送阿里云仓库成功"
 else
   echo "未找到镜像"
