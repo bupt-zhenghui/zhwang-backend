@@ -1,6 +1,8 @@
 .idea
 /mkdocs/.cache/
 /elk/
+/out/
 
 .DS_Store
 /mkdocs/docs/blog/posts/summary-2025.md
+.claude/

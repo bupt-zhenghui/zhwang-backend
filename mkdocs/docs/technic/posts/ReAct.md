@@ -1,7 +1,7 @@
 ---
 draft: false
 date: 2026-04-11
-tags: [AI, agent]
+tags: [AI, agent, 工具调用]
 categories: [AI]
 ---
 
@@ -11,7 +11,17 @@ categories: [AI]
 
 **作者**: Shunyu Yao, Jeffrey Zhao, Dian Yu, Nan Du, Izhak Shafran, Karthik Narasimhan, Yuan Cao
 
+![image-20260412200329908](https://img-1300769438.cos.ap-beijing.myqcloud.com/images/image-20260412200329908.png)
+
+
+
 <!-- more -->
+
+
+
+
+
+
 
 ### 核心问题
 
@@ -49,7 +59,5 @@ categories: [AI]
 2. **推理与动作缺一不可**：纯推理缺乏事实 grounding，纯动作无法分解子目标
 3. **稀疏推理有效**：决策任务中稀疏的 Thought 优于无 Thought 的 Act-only
 4. **few-shot 即可生效**：仅需 1-2 个示例就能超越大量微调的模仿/强化学习方法
-
-### 总结
 
 ReAct 证明了将 LLM 的推理能力与外部交互能力结合的巨大潜力，为构建更可靠、可解释的 LLM Agent 奠定了基础。
