@@ -33,6 +33,7 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - abbr
+  - tables
   - toc:
       permalink: true
       toc_depth: 3
@@ -48,10 +49,15 @@ markdown_extensions:
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.betterem
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji
+  - pymdownx.mark
   - admonition
   - pymdownx.details
   - pymdownx.arithmatex:
       generic: true
+  - footnotes
 
 extra_javascript:
   - javascripts/mathjax.js
@@ -63,12 +69,12 @@ nav:
   - About: index.md
   - Research:
       - Thesis: thesis.md
-  - Archive:
-      - 面试准备: interview.md
-      - 开发手册: 开发手册.md
-      - 算法笔记: 算法笔记.md
-  - Technic:
-      - technic/index.md
+  - Engineering:
+      - engineering/index.md
+  - AI:
+      - ai/index.md
+  - CS Basics:
+      - cs-basics/index.md
   - Blog:
       - blog/index.md
 
@@ -76,7 +82,11 @@ plugins:
   - blog:
       blog_dir: blog
   - blog:
-      blog_dir: technic
+      blog_dir: engineering
+  - blog:
+      blog_dir: ai
+  - blog:
+      blog_dir: cs-basics
   - tags
   - search
   - rss:
